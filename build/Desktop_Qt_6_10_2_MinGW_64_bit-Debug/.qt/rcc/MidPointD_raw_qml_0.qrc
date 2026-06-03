@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/MidPointD/">
+    <file alias="Main.qml">D:/QT/Projects/Mid_point_displacment/Main.qml</file>
+  </qresource>
+</RCC>
+

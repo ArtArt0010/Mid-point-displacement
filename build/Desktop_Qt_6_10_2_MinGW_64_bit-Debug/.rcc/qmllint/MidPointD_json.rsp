@@ -1,0 +1,16 @@
+--bare
+-I
+D:/QT/Projects/Mid_point_displacment/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug
+-I
+D:/QT/Projects/Mid_point_displacment/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/MidPointD
+-I
+D:/QT/Projects/Mid_point_displacment/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug
+-I
+D:/QT/6.10.2/mingw_64/qml
+--resource
+D:/QT/Projects/Mid_point_displacment/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qt/rcc/qmake_MidPointD.qrc
+--resource
+D:/QT/Projects/Mid_point_displacment/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qt/rcc/MidPointD_raw_qml_0.qrc
+D:/QT/Projects/Mid_point_displacment/Main.qml
+--json
+D:/QT/Projects/Mid_point_displacment/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/MidPointD_qmllint.json
