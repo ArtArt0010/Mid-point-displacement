@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  ".qt/rcc/qrc_MidPointD_raw_qml_0.cpp"
+  ".qt/rcc/qrc_qmake_MidPointD.cpp"
+  ".rcc/qmlcache/MidPointD_Main_qml.cpp"
+  ".rcc/qmlcache/MidPointD_Main_qml.cpp.aotstats"
+  ".rcc/qmlcache/MidPointD_qmlcache_loader.cpp"
+  "CMakeFiles/MidPointD_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/MidPointD_autogen.dir/ParseCache.txt"
+  "MidPointD_autogen"
+  "CMakeFiles/MidPointD.dir/MidPointD_autogen/mocs_compilation.cpp.obj"
+  "CMakeFiles/MidPointD.dir/MidPointD_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/MidPointD.dir/build/mingw-Debug/.qt/rcc/qrc_MidPointD_raw_qml_0.cpp.obj"
+  "CMakeFiles/MidPointD.dir/build/mingw-Debug/.qt/rcc/qrc_MidPointD_raw_qml_0.cpp.obj.d"
+  "CMakeFiles/MidPointD.dir/build/mingw-Debug/.qt/rcc/qrc_qmake_MidPointD.cpp.obj"
+  "CMakeFiles/MidPointD.dir/build/mingw-Debug/.qt/rcc/qrc_qmake_MidPointD.cpp.obj.d"
+  "CMakeFiles/MidPointD.dir/build/mingw-Debug/.rcc/qmlcache/MidPointD_Main_qml.cpp.obj"
+  "CMakeFiles/MidPointD.dir/build/mingw-Debug/.rcc/qmlcache/MidPointD_Main_qml.cpp.obj.d"
+  "CMakeFiles/MidPointD.dir/build/mingw-Debug/.rcc/qmlcache/MidPointD_qmlcache_loader.cpp.obj"
+  "CMakeFiles/MidPointD.dir/build/mingw-Debug/.rcc/qmlcache/MidPointD_qmlcache_loader.cpp.obj.d"
+  "CMakeFiles/MidPointD.dir/main.cpp.obj"
+  "CMakeFiles/MidPointD.dir/main.cpp.obj.d"
+  "CMakeFiles/MidPointD.dir/mid_point_displacment.cpp.obj"
+  "CMakeFiles/MidPointD.dir/mid_point_displacment.cpp.obj.d"
+  "CMakeFiles/MidPointD.dir/midpointd_qmltyperegistrations.cpp.obj"
+  "CMakeFiles/MidPointD.dir/midpointd_qmltyperegistrations.cpp.obj.d"
+  "MidPointD.exe"
+  "MidPointD.exe.manifest"
+  "MidPointD.pdb"
+  "MidPointD/MidPointD.qmltypes"
+  "MidPointD_autogen/mocs_compilation.cpp"
+  "MidPointD_autogen/timestamp"
+  "libMidPointD.dll.a"
+  "meta_types/MidPointD_json_file_list.txt"
+  "meta_types/MidPointD_json_file_list.txt.timestamp"
+  "meta_types/qt6midpointd_debug_metatypes.json"
+  "meta_types/qt6midpointd_debug_metatypes.json.gen"
+  "midpointd_qmltyperegistrations.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/MidPointD.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

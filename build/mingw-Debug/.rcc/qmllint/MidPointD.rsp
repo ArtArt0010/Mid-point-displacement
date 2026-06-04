@@ -1,0 +1,10 @@
+--bare
+-I
+C:/Users/artem/Documents/qt_projects/Mid-point-displacement/build/mingw-Debug
+-I
+C:/Qt/6.8.3/mingw_64/qml
+--resource
+C:/Users/artem/Documents/qt_projects/Mid-point-displacement/build/mingw-Debug/.qt/rcc/qmake_MidPointD.qrc
+--resource
+C:/Users/artem/Documents/qt_projects/Mid-point-displacement/build/mingw-Debug/.qt/rcc/MidPointD_raw_qml_0.qrc
+C:/Users/artem/Documents/qt_projects/Mid-point-displacement/Main.qml

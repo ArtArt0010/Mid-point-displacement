@@ -1,0 +1,14 @@
+-rootPath
+C:/Users/artem/Documents/qt_projects/Mid-point-displacement
+-cmake-output
+-output-file
+C:/Users/artem/Documents/qt_projects/Mid-point-displacement/build/mingw-Debug/.qt/qml_imports/MidPointD_build.cmake
+-importPath
+C:/Users/artem/Documents/qt_projects/Mid-point-displacement/build/mingw-Debug/MidPointD
+-importPath
+C:/Users/artem/Documents/qt_projects/Mid-point-displacement/build/mingw-Debug
+-importPath
+C:/Qt/6.8.3/mingw_64/qml
+-qrcFiles
+C:/Users/artem/Documents/qt_projects/Mid-point-displacement/build/mingw-Debug/.qt/rcc/qmake_MidPointD.qrc
+C:/Users/artem/Documents/qt_projects/Mid-point-displacement/build/mingw-Debug/.qt/rcc/MidPointD_raw_qml_0.qrc

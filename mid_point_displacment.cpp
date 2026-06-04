@@ -120,15 +120,20 @@ void Mid_point_displacment::classBegin()
     QQuickPaintedItem::classBegin();
 }
 
-Chunk Mid_point_displacment::generateChunk(double startX, double startY, double endY)
+Chunk Mid_point_displacment::generateChunk(double startX, double startY, double endY, long long chunkId)
 {
     Chunk c;
     c.xStart = startX;
 
     double h = height();
+
+
+    std::mt19937 chunkRng(chunkId * 2654435761ULL + 1013904223ULL);
+
+
     QVector<QPointF> pts;
-    pts.append(QPointF(0,startY));// левая граница. Y от предыдущего чанка
-    pts.append(QPointF(m_chunkWidth, endY)); // правая граница. Y для следующего чанка
+    pts.append(QPointF(0, startY));
+    pts.append(QPointF(m_chunkWidth, endY));
 
     double offset = m_offset;
     for (int i = 0; i < m_iterations; i++)
@@ -139,9 +144,7 @@ Chunk Mid_point_displacment::generateChunk(double startX, double startY, double 
             QPointF p1 = pts[j];
             QPointF p2 = pts[j + 1];
             double mx = (p1.x() + p2.x()) * 0.5;
-            double my = (p1.y() + p2.y()) * 0.5 + random_range(-offset, offset);
-
-
+            double my = (p1.y() + p2.y()) * 0.5 + randLocal(-offset, offset, chunkRng);
             my = std::clamp(my, h * 0.05, h * 0.95);
             newPts.append(p1);
             newPts.append(QPointF(mx, my));
@@ -166,25 +169,44 @@ Chunk Mid_point_displacment::getChank(long long id)
 
     if (id == 0)
     {
-        startY = h * 0.5;
-        endY = random_range(h * 0.2, h * 0.8);
+        startY = boundaryY(0, h);
+        endY   = boundaryY(1, h);
     }
     else if (id > 0)
     {
-        startY = getChank(id - 1).endY;
-        endY = random_range(h * 0.2, h * 0.8);
+        startY = boundaryY(id, h);
+        endY   = boundaryY(id + 1, h);
     }
     else
     {
-        endY = getChank(id + 1).points.first().y();
-        startY = random_range(h * 0.2, h * 0.8);
+        endY   = boundaryY(id + 1, h);
+        startY = boundaryY(id, h);
     }
 
-    Chunk c = generateChunk(id * m_chunkWidth, startY, endY);
+    Chunk c = generateChunk(id * m_chunkWidth, startY, endY, id);
     c.endY = endY;
     m_chunkCache.insert(id, c);
     return c;
 }
+
+double Mid_point_displacment::boundaryY(long long boundaryId, double h) const
+{
+    unsigned long long seed = boundaryId * 2654435761ULL + 1013904223ULL;
+    std::mt19937 rng(seed);
+    //распределение с диапазоном [min, max]
+    std::uniform_real_distribution<double> dist(h * 0.2, h * 0.8);
+    double y = dist(rng);
+
+    return y;
+}
+
+double Mid_point_displacment::randLocal(double min, double max, std::mt19937 &rng) const
+{
+    std::uniform_real_distribution<double> dist(min, max);
+    double result = dist(rng);
+    return result;
+}
+
 void Mid_point_displacment::updateChunks()
 {
     double left = m_cameraX - width();

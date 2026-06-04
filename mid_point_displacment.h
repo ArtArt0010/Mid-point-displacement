@@ -67,9 +67,12 @@ private:
 
     void classBegin() override;
 
-    Chunk generateChunk(double startX, double startY, double endY);
+    Chunk generateChunk(double startX, double startY, double endY, long long chunkId);
 
     Chunk getChank(long long id);
+
+    double boundaryY(long long boundaryId, double h) const;
+    double randLocal(double min, double max, std::mt19937 &rng) const;
 
     void updateChunks();
 
@@ -77,8 +80,8 @@ private:
     QVector<QPointF> m_points;
     std::mt19937 m_rng;
 
-    double m_roughness = 0.9;   // "шероховатость"
-    double m_offset = 120.0;    // начальное смещение
+    double m_roughness = 0.9;   //шероховатость
+    double m_offset = 120.0;    //начальное смещение
     int m_iterations = 8;
 
     double m_cameraX = 0.0;

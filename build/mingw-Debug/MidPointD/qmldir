@@ -1,0 +1,5 @@
+module MidPointD
+typeinfo MidPointD.qmltypes
+prefer :/MidPointD/
+Main 1.0 Main.qml
+
